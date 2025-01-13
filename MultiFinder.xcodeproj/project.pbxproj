@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B75D2F9C2D34B28400762CB6 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = B75D2F9B2D34B28400762CB6 /* API */; };
+		B75D2F9E2D34B28400762CB6 /* Entity in Frameworks */ = {isa = PBXBuildFile; productRef = B75D2F9D2D34B28400762CB6 /* Entity */; };
+		B75D2FA02D34B28400762CB6 /* Feature in Frameworks */ = {isa = PBXBuildFile; productRef = B75D2F9F2D34B28400762CB6 /* Feature */; };
+		B75D2FA22D34B28700762CB6 /* View in Frameworks */ = {isa = PBXBuildFile; productRef = B75D2FA12D34B28700762CB6 /* View */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B75D2F502D34A51F00762CB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75D2FA02D34B28400762CB6 /* Feature in Frameworks */,
+				B75D2F9C2D34B28400762CB6 /* API in Frameworks */,
+				B75D2F9E2D34B28400762CB6 /* Entity in Frameworks */,
+				B75D2FA22D34B28700762CB6 /* View in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,7 @@
 				B75D2F412D34A51C00762CB6 /* MultiFinder */,
 				B75D2F522D34A51F00762CB6 /* MultiFinderTests */,
 				B75D2F5C2D34A51F00762CB6 /* MultiFinderUITests */,
+				B75D2F9A2D34B28400762CB6 /* Frameworks */,
 				B75D2F402D34A51C00762CB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +104,13 @@
 				B75D2F592D34A51F00762CB6 /* MultiFinderUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B75D2F9A2D34B28400762CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +133,10 @@
 			);
 			name = MultiFinder;
 			packageProductDependencies = (
+				B75D2F9B2D34B28400762CB6 /* API */,
+				B75D2F9D2D34B28400762CB6 /* Entity */,
+				B75D2F9F2D34B28400762CB6 /* Feature */,
+				B75D2FA12D34B28700762CB6 /* View */,
 			);
 			productName = MultiFinder;
 			productReference = B75D2F3F2D34A51C00762CB6 /* MultiFinder.app */;
@@ -560,6 +583,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B75D2F9B2D34B28400762CB6 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
+		B75D2F9D2D34B28400762CB6 /* Entity */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Entity;
+		};
+		B75D2F9F2D34B28400762CB6 /* Feature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Feature;
+		};
+		B75D2FA12D34B28700762CB6 /* View */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = View;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B75D2F372D34A51C00762CB6 /* Project object */;
 }
