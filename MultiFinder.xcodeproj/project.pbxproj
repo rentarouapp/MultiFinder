@@ -27,6 +27,7 @@
 		B75D2F3F2D34A51C00762CB6 /* MultiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75D2F4F2D34A51F00762CB6 /* MultiFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75D2F592D34A51F00762CB6 /* MultiFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75D2F6C2D34AEBE00762CB6 /* MultiFinderPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MultiFinderPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		B75D2F362D34A51C00762CB6 = {
 			isa = PBXGroup;
 			children = (
+				B75D2F6C2D34AEBE00762CB6 /* MultiFinderPackage */,
 				B75D2F412D34A51C00762CB6 /* MultiFinder */,
 				B75D2F522D34A51F00762CB6 /* MultiFinderTests */,
 				B75D2F5C2D34A51F00762CB6 /* MultiFinderUITests */,
