@@ -7,8 +7,6 @@ let package = Package(
     name: "MultiFinderPackage",
     platforms: [.iOS(.v16)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(name: "MultiFinderPackage", targets: ["MultiFinderPackage"]),
         .library(name: "API", targets: ["API"]),
         .library(name: "Entity", targets: ["Entity"]),
         .library(name: "Feature", targets: ["Feature"]),
@@ -19,14 +17,6 @@ let package = Package(
         .package(url: "https://github.com/rentarouapp/CocoaNetworkingMonitor.git", .upToNextMajor(from: "0.1.0")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "MultiFinderPackage"),
-        .testTarget(
-            name: "MultiFinderPackageTests",
-            dependencies: ["MultiFinderPackage"]
-        ),
         .target(name: "Entity", dependencies: []),
         .target(name: "API", dependencies: ["Entity"]),
         .target(name: "Feature",
