@@ -31,7 +31,7 @@ public final class APIClient: APIClientProtocol {
     
     public func fetch<Request>(with request: Request) async throws -> Request.Response where Request: APIRequestType {
         guard let request = request.generateURLRequest() else {
-            throw APIServiceError.invalidRequestError
+            throw APIError.invalidRequestError
         }
         print("DEBUG_URL_CHECK_Concurrency: \(request.url?.absoluteString ?? "none_url")")
         let result = try await session.data(for: request)
@@ -39,17 +39,17 @@ public final class APIClient: APIClientProtocol {
         let response = result.1
         
         guard let code = (response as? HTTPURLResponse)?.statusCode else {
-            throw APIServiceError.connectionError(data)
+            throw APIError.connectionError(data)
         }
         guard (200..<300).contains(code) else {
-            throw APIServiceError.apiStatusError
+            throw APIError.apiStatusError
         }
         return try decoder.decode(Request.Response.self, from: data)
     }
     
     public func fetch(with keyword: String) async throws -> ShopInfoRequest.Response {
         guard let request = ShopInfoRequest(keyword: keyword).generateURLRequest() else {
-            throw APIServiceError.invalidRequestError
+            throw APIError.invalidRequestError
         }
         print("DEBUG_URL_CHECK_Concurrency_Dependency: \(request.url?.absoluteString ?? "none_url")")
         let result = try await session.data(for: request)
@@ -57,11 +57,19 @@ public final class APIClient: APIClientProtocol {
         let response = result.1
         
         guard let code = (response as? HTTPURLResponse)?.statusCode else {
-            throw APIServiceError.connectionError(data)
+            throw APIError.connectionError(data)
         }
         guard (200..<300).contains(code) else {
-            throw APIServiceError.apiStatusError
+            throw APIError.apiStatusError
         }
         return try decoder.decode(ShopInfoRequest.Response.self, from: data)
     }
+}
+
+public enum APIError: Error {
+    case invalidRequestError
+    case apiStatusError
+    case connectionError(Data)
+    case responseError
+    case parseError(Error)
 }
